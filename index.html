@@ -15,16 +15,25 @@
         alert(deviceOS());
         var os = deviceOS();
         if (os == 'iOS') {
-            alert('open app');
-            window.location.replace("instagram://");
-            setTimeout(() => {
-                alert('open app store app');            
-                window.location.replace("itms-apps://itunes.apple.com/app/id389801252");
-                }, 10000);
-            setTimeout(() => {
-                alert('open app store url');            
-                window.location.replace("https://apps.apple.com/au/app/instagram/id389801252");
-                }, 20000);
+            var now = new Date().valueOf();
+            setTimeout(function () {
+                if (new Date().valueOf() - now > 100) return;
+                window.location = "itms-apps://itunes.apple.com/app/id389801252";
+            }, 25);
+            window.location = "instagram://";
+            
+            
+            
+            // alert('open app');
+            // window.location.replace("instagram://");
+            // setTimeout(() => {
+            //     alert('open app store app');            
+            //     window.location.replace("itms-apps://itunes.apple.com/app/id389801252");
+            //     }, 10000);
+            // setTimeout(() => {
+            //     alert('open app store url');            
+            //     window.location.replace("https://apps.apple.com/au/app/instagram/id389801252");
+            //     }, 20000);
         }
 
 
