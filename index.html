@@ -12,30 +12,28 @@
     <script>
         $("#btnOpenApp").click(function(e){            
             e.preventDefault();
-            alert(deviceOS());
+            //alert(deviceOS());
             var os = deviceOS();
             if (os == 'iOS') {                
                 window.location.replace("itms-apps://itunes.apple.com/app/id389801252");                
                 setTimeout(function () {
-                    window.location.replace("https://apps.apple.com/au/app/instagram/id389801252");
-                }, 7000);                
+                    window.location.replace("https://apps.apple.com/app/instagram/id389801252");
+                }, 5000);                
+            } else if (os == 'Mac OS') {
+                window.location.replace("itms-apps://itunes.apple.com/app/id389801252");                
+                setTimeout(function () {
+                    window.location.replace("https://apps.apple.com/app/instagram/id389801252");
+                }, 5000);
             } else if (os == 'Android') {
-
-            }
-        
-
-        if (os == 'Windows') {    
-            window.location.replace("https://apps.apple.com/au/app/instagram/id389801252");
-            //window.location.replace("https://addzme.me");
-            return
-            
-            setTimeout(() => {
-            //alert('open app store');
-            //window.location.replace("https://apps.apple.com/us/app/instagram/id389801252");
-            //window.location.replace("https://addzme.me/");
-            window.location.replace("https://apps.apple.com/au/app/instagram/id389801252");
-            }, 10000);
-        }
+                window.location.replace("market://details?id=<appID>"); // Need to add Play store ID
+                setTimeout(function(){
+                    window.location.replace("https://play.google.com/store/apps/details?id=com.instagram.android&hl=en&gl=US"); //Need to add Play Store link
+                }, 5000);
+            } else if (os == 'Windows') {
+                window.location.replace("https://play.google.com/store/apps/details?id=com.instagram.android&hl=en&gl=US"); //Need to add Play Store link
+            } else if (os == 'Linux') {
+                window.location.replace("https://play.google.com/store/apps/details?id=com.instagram.android&hl=en&gl=US"); //Need to add Play Store link
+            }        
     });
     function deviceOS() {
     var userAgent = window.navigator.userAgent,
@@ -58,20 +56,6 @@
         }
         return os;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </script>
     
 </body>
