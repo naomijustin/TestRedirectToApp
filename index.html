@@ -16,11 +16,11 @@
             alert(deviceOS());
             var os = deviceOS();
             if (os == 'iOS') {
-                $('<iframe />').attr('src', appurl).attr('style', 'width: 0px; height: 0px').appendTo('body');
+                $('<iframe />').attr('src', 'instagram://').attr('style', 'width: 0px; height: 0px').appendTo('body');
                 window.location.replace("instagram://");
                 //window.location.replace("itms-apps://itunes.apple.com/app/id389801252");
                 setTimeout(function () {
-                    //window.location.replace("https://apps.apple.com/au/app/instagram/id389801252");
+                    window.location.replace("https://apps.apple.com/au/app/instagram/id389801252");
                 }, 5000);
                 
                 //window.location = "itms-apps://itunes.apple.com/app/id389801252";
