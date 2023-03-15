@@ -8,6 +8,7 @@
     
 </head>
 <body>
+    <iframe src="instagram://" style="width: 0px; height: 0px;"></iframe>
     <button id="btnOpenApp">Open App</button>   
     <script>
         document.getElementById("btnOpenApp").addEventListener("click", function(e){
@@ -20,7 +21,8 @@
                 if (new Date().valueOf() - now > 100) return;
                 window.location = "itms-apps://itunes.apple.com/app/id389801252";
             }, 5);
-            window.location = "instagram://";
+            window.location = "itms-apps://itunes.apple.com/app/id389801252";
+            //window.location = "instagram://";
             
             
             
