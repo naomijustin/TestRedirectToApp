@@ -10,7 +10,8 @@
 <body>
     <button id="btnOpenApp">Open App</button>   
     <script>
-        document.getElementById("btnOpenApp").addEventListener("click", function(){
+        document.getElementById("btnOpenApp").addEventListener("click", function(e){
+        e.preventDefault();
         alert(deviceOS());
         var os = deviceOS();
         if (os == 'iOS') {
