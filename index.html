@@ -17,9 +17,13 @@
             alert('open app');
             window.location.replace("instagram://");
             setTimeout(() => {
-                alert('open app store');            
-                window.location.replace("https://apps.apple.com/au/app/instagram/id389801252");
+                alert('open app store app');            
+                window.location.replace("itms-apps://itunes.apple.com/app/id389801252");
                 }, 10000);
+            setTimeout(() => {
+                alert('open app store url');            
+                window.location.replace("https://apps.apple.com/au/app/instagram/id389801252");
+                }, 20000);
         }
 
 
