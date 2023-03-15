@@ -1,5 +1,5 @@
 document.getElementById("btnOpenApp").addEventListener("click", function(){
-    //alert(deviceOS());
+    alert(deviceOS());
     var os = deviceOS();
     if (os == 'iOS') {
         alert('open app');
