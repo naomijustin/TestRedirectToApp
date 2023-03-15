@@ -1,19 +1,29 @@
 document.getElementById("btnOpenApp").addEventListener("click", function(){
-  //alert(deviceOS());
-  var os = deviceOS();
-  if (os == 'Windows') {    
-    window.location.replace("https://apps.apple.com/au/app/instagram/id389801252");
-    //window.location.replace("https://addzme.me");
-    return
-    alert('open app');
-    window.location.replace("instagram://");
-    setTimeout(() => {
-      alert('open app store');
-      //window.location.replace("https://apps.apple.com/us/app/instagram/id389801252");
-      //window.location.replace("https://addzme.me/");
-      window.location.replace("https://apps.apple.com/au/app/instagram/id389801252");
-    }, 10000);
-  }
+    //alert(deviceOS());
+    var os = deviceOS();
+    if (os == 'iOS') {
+        alert('open app');
+        window.location.replace("instagram://");
+        setTimeout(() => {
+            alert('open app store');            
+            window.location.replace("https://apps.apple.com/au/app/instagram/id389801252");
+            }, 10000);
+    }
+
+
+    if (os == 'Windows') {    
+        window.location.replace("https://apps.apple.com/au/app/instagram/id389801252");
+        //window.location.replace("https://addzme.me");
+        return
+        alert('open app');
+        window.location.replace("instagram://");
+        setTimeout(() => {
+        alert('open app store');
+        //window.location.replace("https://apps.apple.com/us/app/instagram/id389801252");
+        //window.location.replace("https://addzme.me/");
+        window.location.replace("https://apps.apple.com/au/app/instagram/id389801252");
+        }, 10000);
+    }
 });
 function deviceOS() {
    var userAgent = window.navigator.userAgent,
