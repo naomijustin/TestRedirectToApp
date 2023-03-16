@@ -8,39 +8,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 <body>    
-    <button id="btnOpenApp">Open App</button>   
-    <intent-filter>
-        <data android:scheme="startci" />
-        <action android:name="android.intent.action.VIEW" />
-        <category android:name="android.intent.category.DEFAULT" />
-        <category android:name="android.intent.category.BROWSABLE" />
-    </intent-filter>
+    <button id="btnOpenApp">Open App</button>    
     <script>
         $("#btnOpenApp").click(function(e){            
-            e.preventDefault();
-            //alert(deviceOS());
+            e.preventDefault();            
             var os = deviceOS();
             if (os == 'iOS') { // iOS  
-                window.location.replace("instagram://");                
-                setTimeout(function () {
-                    window.location.replace("itms-apps://itunes.apple.com/app/id389801252");
-                }, 5000);
+                window.location.replace("itms-apps://itunes.apple.com/app/id389801252");                                
                 setTimeout(function () {
                     window.location.replace("https://apps.apple.com/app/instagram/id389801252");
-                }, 10000);               
-            } else if (os == 'Mac OS') {
-                window.location.replace("itms-apps://itunes.apple.com/app/id389801252");                
-                setTimeout(function () {
-                    window.location.replace("https://apps.apple.com/app/instagram/id389801252");
-                }, 5000);
+                }, 3000);               
             } else if (os == 'Android') { // Android
-                window.location.replace("intent://scan/#Intent;scheme=instagram;package=com.instagram.android;end"); 
-                setTimeout(function(){
-                    window.location.replace("market://details?id=com.instagram.android&hl=en"); 
-                }, 5000);
+                window.location.replace("market://details?id=com.instagram.android&hl=en");                 
                 setTimeout(function(){
                     window.location.replace("https://play.google.com/store/apps/details?id=com.instagram.android&hl=en");
-                }, 10000);
+                }, 3000);
+            } else if (os == 'Mac OS') {
+                window.location.replace("https://apps.apple.com/app/instagram/id389801252");                                
             } else if (os == 'Windows') {
                 window.location.replace("https://play.google.com/store/apps/details?id=com.instagram.android&hl=en");
             } else if (os == 'Linux') {
@@ -53,8 +37,7 @@
         macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K', 'macOS'],
         windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
         iosPlatforms = ['iPhone', 'iPad', 'iPod'],
-        os = null;
-        //alert("platform = " + platform);
+        os = null;        
         if (macosPlatforms.indexOf(platform) !== -1) {
         os = 'Mac OS';
         } else if (iosPlatforms.indexOf(platform) !== -1) {
