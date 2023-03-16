@@ -9,12 +9,18 @@
 </head>
 <body>    
     <button id="btnOpenApp">Open App</button>   
+    <intent-filter>
+        <data android:scheme="startci" />
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+    </intent-filter>
     <script>
         $("#btnOpenApp").click(function(e){            
             e.preventDefault();
             //alert(deviceOS());
             var os = deviceOS();
-            if (os == 'iOS') {                
+            if (os == 'iOS') { // iOS  
                 window.location.replace("instagram://");                
                 setTimeout(function () {
                     window.location.replace("itms-apps://itunes.apple.com/app/id389801252");
@@ -27,8 +33,8 @@
                 setTimeout(function () {
                     window.location.replace("https://apps.apple.com/app/instagram/id389801252");
                 }, 5000);
-            } else if (os == 'Android') {
-                window.location.replace("schemeName://hostName/path?id=com.instagram.android&hl=en"); 
+            } else if (os == 'Android') { // Android
+                window.location.replace("intent://path/#Intent;scheme=instagram;package=com.instagram.android;end"); 
                 setTimeout(function(){
                     window.location.replace("market://details?id=com.instagram.android&hl=en"); 
                 }, 5000);
