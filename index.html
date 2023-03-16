@@ -28,17 +28,17 @@
                     window.location.replace("https://apps.apple.com/app/instagram/id389801252");
                 }, 5000);
             } else if (os == 'Android') {
-                window.location.replace("instagram://"); // Need to add Play store ID
+                window.location.replace("schemeName://hostName/path?id=com.instagram.android&hl=en"); 
                 setTimeout(function(){
-                    window.location.replace("market://details?id=com.instagram.android&hl=en"); //Need to add Play Store link
+                    window.location.replace("market://details?id=com.instagram.android&hl=en"); 
                 }, 5000);
                 setTimeout(function(){
-                    window.location.replace("https://play.google.com/store/apps/details?id=com.instagram.android&hl=en"); //Need to add Play Store link
+                    window.location.replace("https://play.google.com/store/apps/details?id=com.instagram.android&hl=en");
                 }, 10000);
             } else if (os == 'Windows') {
-                window.location.replace("https://play.google.com/store/apps/details?id=com.instagram.android&hl=en"); //Need to add Play Store link
+                window.location.replace("https://play.google.com/store/apps/details?id=com.instagram.android&hl=en");
             } else if (os == 'Linux') {
-                window.location.replace("https://play.google.com/store/apps/details?id=com.instagram.android&hl=en"); //Need to add Play Store link
+                window.location.replace("https://play.google.com/store/apps/details?id=com.instagram.android&hl=en");
             }        
     });
     function deviceOS() {
