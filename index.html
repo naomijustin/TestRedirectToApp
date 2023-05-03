@@ -29,6 +29,15 @@
     <br />
     <label>Test with Bootstrap - Autocapitalize off</label>
     <input type="text" class="form-control" autocapitalize="off" id="txtAccountFirstName" placeholder="First Name" name="txtAccountFirstName" maxlength="50">
+    <br />
+    <label>Test Form Floating</label>
+    <div class="row col-12 justify-content-center gy-2">
+        <div class="form-group col-sm-8 col-lg-6 form-floating">
+            <input type="text" class="form-control" id="txtAccountFirstName" placeholder="First Name" name="txtAccountFirstName" maxlength="50">
+            <label for="txtAccountFirstName" class="form-label">First Name</label>
+            <div class="invalid-feedback text-right">This field is required.</div>
+        </div>
+    </div>
     <br/><br/><br/><br/>
 
     <button id="btnOpenApp">Open App</button>    
